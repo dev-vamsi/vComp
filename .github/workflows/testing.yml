@@ -28,6 +28,7 @@ jobs:
               with:
                   build: npm run build
                   start: npm run dev
+                  command: npx cypress run --component --headless
 
             - name: Upload Cypress artifacts
               uses: actions/upload-artifact@v3

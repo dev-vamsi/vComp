@@ -1,7 +1,13 @@
 import Button from './Button';
 
 describe('<Button /> component tests', () => {
-    it('Button should render as expected', () => {
-        cy.mount(<Button>Click Me</Button>);
+    let buttonText = 'My Button';
+    beforeEach(() => {
+        cy.mount(<Button>{buttonText}</Button>);
+    });
+
+    it('Rendered Button should be visible', () => {
+        cy.get('button').should('be.visible').should('have.text', buttonText);
+        cy.get('button').click();
     });
 });

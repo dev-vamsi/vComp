@@ -27,7 +27,7 @@ jobs:
               uses: cypress-io/github-action@v6
               with:
                   build: npm run build
-                  start: npm start
+                  start: npm run dev
 
             - name: Upload Cypress artifacts
               uses: actions/upload-artifact@v3

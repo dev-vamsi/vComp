@@ -6,7 +6,7 @@ describe('<Checkbox /> component tests', () => {
         cy.mount(<Checkbox>{checkboxLabel}</Checkbox>);
     });
 
-    it('Rendered Button should be visible', () => {
+    it('Rendered Checkbox should be visible', () => {
         cy.get('.checkbox_container').should('be.visible');
         cy.get('label').contains(checkboxLabel).should('be.visible');
         cy.get('.checkbox_container > div').click();
